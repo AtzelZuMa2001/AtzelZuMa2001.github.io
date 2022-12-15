@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unidad 4</title>
+        <meta charset="UTF-8">
+        <link href="css/estilosPrincipales.css" rel = "stylesheet">
+        <script src="script/mainScript.js"></script>
+    </head>
+    <body>
+        <div id="barraLateral">
+            <div class="botonLateral" id = "botonLateral" onclick="mostrar()">
+                <span>&#9776;</span>
+            </div>
+            <ul>
+                <li><img id ="logoDelTec" src="img/its.png" alt="escudo del tecnologico"></li>
+                <li><a href="index.html" style="text-decoration: none;">Inicio</a></li>
+                <li><a href="unidad1.html" style="text-decoration: none;">Unidad 1</a></li>
+                <li><a href="unidad2.html" style="text-decoration: none;">Unidad 2</a></li>
+                <li><a href="unidad3.html" style="text-decoration: none;">Unidad 3</a></li>
+                <li><a href="unidad4.html" style="text-decoration: none;">Unidad 4</a></li>
+            </ul>
+        </div>
+        <div class="titulo">
+            <h1>Unidad 4</h1>
+        </div>
+    <center>
+        <div class="contenido">
+            <h2>Procesamiento paralelo</h2>
+            <br><br>
+            <h3>Aspectos Básicos de la computación paralela</h3>
+            <br><br>
+            La computación paralela es una forma de cómputo en la que muchas
+            instrucciones se ejecutan simultáneamente, operando sobre el
+            principio de que problemas grandes, a menudo se pueden dividir en
+            unos más pequeños, que luego son resueltos simultáneamente (en
+            paralelo). Hay varias formas diferentes de computación paralela:
+            paralelismo a nivel de bit, paralelismo a nivel de instrucción,
+            paralelismo de datos y paralelismo de tareas.<br><br>
+            El paralelismo se ha
+            empleado durante muchos años, sobre todo en la computación de
+            altas prestaciones, pero el interés en ella ha crecido últimamente
+            debido a las limitaciones físicas que impiden el aumento de la
+            frecuencia. Como el consumo de energía y por consiguiente la
+            generación de calor de las computadoras constituye una
+            preocupación en los últimos años, la computación en paralelo se ha
+            convertido en el paradigma dominante en la arquitectura de
+            computadores, principalmente en forma de procesadores
+            multinúcleo.
+            <br><br>
+            <center><image src="img/paralelismo.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            Los programas informáticos paralelos son más difíciles de escribir
+            que los secuenciales, porque la concurrencia introduce nuevos tipos
+            de errores de software, siendo las condiciones de carrera los más
+            comunes. La comunicación y sincronización entre diferentes
+            subtareas son algunos de los mayores obstáculos para obtener un
+            buen rendimiento del programa paralelo. La máxima aceleración
+            posible de un programa como resultado de la paralelización se
+            conoce como la ley de Amdahl.
+            <br><br>
+            <h3>Ley de Amdahl y ley de Gustafson</h3>
+            <br><br>
+            Idealmente, la aceleración a partir de la paralelización es lineal,
+            doblar el número de elementos de procesamiento debe reducir a la
+            mitad el tiempo de ejecución y doblarlo por segunda vez debe
+            nuevamente reducir el tiempo a la mitad. Sin embargo, muy pocos
+            algoritmos paralelos logran una aceleración óptima. La mayoría
+            tienen una aceleración casi lineal para un pequeño número de
+            elementos de procesamiento, y pasa a ser constante para un gran
+            número de elementos de procesamiento.<br><br>
+            La aceleración potencial de un algoritmo en una plataforma de
+            cómputo en paralelo está dada por la ley de Amdahl, formulada
+            originalmente por Gene Amdahl en la década de 1960. Esta señala
+            que una pequeña porción del programa que no pueda paralelizarse
+            va a limitar la aceleración que se logra con la paralelización. Los
+            programas que resuelven problemas matemáticos o ingenieriles
+            típicamente consisten en varias partes paralelizables y varias no
+            paralelizables (secuenciales).<br><br>
+            La ley de Gustafson es otra ley en computación que está en estrecha
+            relación con la ley de Amdahl. Ambas leyes asumen que el tiempo
+            de funcionamiento de la parte secuencial del programa es
+            independiente del número de procesadores. La ley de Amdahl
+            supone que todo el problema es de tamaño fijo, por lo que la
+            cantidad total de trabajo que se hará en paralelo también es
+            independiente del número de procesadores, mientras que la ley de
+            Gustafson supone que la cantidad total de trabajo que se hará en
+            paralelo varía linealmente con el número de procesadores.
+            <br><br>
+            <h2>Tipos de computación paralela</h2>
+            <br><br>
+            <h3>Paralelismo a nivel de bit.</h3>
+            <br><br>
+            Desde el advenimiento de la integración a gran escala (VLSI) como
+            tecnología de fabricación de chips de computadora en la década de
+            1970 hasta alrededor de 1986, la aceleración en la arquitectura de
+            computadores se lograba en gran medida duplicando el tamaño de la
+            palabra en la computadora, la cantidad de información que el
+            procesador puede manejar por ciclo. El aumento del tamaño de la
+            palabra reduce el número de instrucciones que el procesador debe
+            ejecutar para realizar una operación en variables cuyos tamaños son
+            mayores que la longitud de la palabra. Por ejemplo, cuando un
+            procesador de 8 bits debe sumar dos enteros de 16 bits, el
+            procesador primero debe adicionar los 8 bits de orden inferior de
+            cada número entero con la instrucción de adición, a continuación,
+            añadir los 8 bits de orden superior utilizando la instrucción de
+            adición con acarreo que tiene en cuenta el bit de acarreo de la
+            adición de orden inferior, en este caso un procesador de 8 bits
+            requiere dos instrucciones para completar una sola operación, en
+            donde un procesador de 16 bits necesita una sola instrucción para
+            poder completarla.<br><br>
+            Históricamente, los microprocesadores de 4 bits fueron sustituidos
+            por unos de 8 bits, luego de 16 bits y 32 bits, esta tendencia general
+            llegó a su fin con la introducción de procesadores de 64 bits, lo que
+            ha sido un estándar en la computación de propósito general durante
+            la última década.
+            <br><br>
+            <center><image src="img/bits.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Paralelismo a nivel de instrucción.</h3>
+            <br><br>
+            Los procesadores modernos tienen ''pipeline'' de instrucciones de
+            varias etapas. Cada etapa en el pipeline corresponde a una acción
+            diferente que el procesador realiza en la instrucción correspondiente
+            a la etapa; un procesador con un pipeline de N etapas puede tener
+            hasta n instrucciones diferentes en diferentes etapas de finalización.
+            El ejemplo canónico de un procesador segmentado es un procesador
+            RISC, con cinco etapas: pedir instrucción, decodificar, ejecutar,
+            acceso a la memoria y escritura. El procesador Pentium 4 tenía un
+            pipeline de 35 etapas.
+            <br><br>
+            <center><image src="img/bits2.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            Además del paralelismo a nivel de instrucción del pipelining,
+            algunos procesadores pueden ejecutar más de una instrucción a la
+            vez. Estos son conocidos como procesadores superescalares. Las
+            instrucciones pueden agruparse juntas sólo si no hay dependencia de
+            datos entre ellas. El scoreboarding y el algoritmo de Tomasulo —
+            que es similar a scoreboarding pero hace uso del renombre de
+            registros— son dos de las técnicas más comunes para implementar
+            la ejecución fuera de orden y la paralelización a nivel de instrucción.
+            <br><br>
+            <h3>Paralelismo de datos.</h3>
+            <br><br>
+            El paralelismo de datos es el paralelismo inherente en programas
+            con ciclos, que se centra en la distribución de los datos entre los
+            diferentes nodos computacionales que deben tratarse en paralelo.
+            "La paralelización de ciclos conduce a menudo a secuencias
+            similares de operaciones —no necesariamente idénticas— o
+            funciones que se realizan en los elementos de una gran estructura de
+            datos". Muchas de las aplicaciones científicas y de ingeniería
+            muestran paralelismo de datos.<br><br>
+            Una dependencia de terminación de ciclo es la dependencia de una
+            iteración de un ciclo en la salida de una o más iteraciones anteriores.
+            Las dependencias de terminación de ciclo evitan la paralelización de
+            ciclos.
+            <br><br>
+            <center><image src="img/bits3.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Paralelismo de tareas.</h3>
+            <br><br>
+            Paralelismo de tareas es un paradigma de la programación
+            concurrente que consiste en asignar distintas tareas a cada uno de los
+            procesadores de un sistema de cómputo. En consecuencia, cada
+            procesador efectuará su propia secuencia de operaciones.<br><br>
+            En su modo más general, el paralelismo de tareas se representa
+            mediante un grafo de tareas, el cual es subdividido en subgrafos que
+            son luego asignados a diferentes procesadores. De la forma como se
+            corte el grafo, depende la eficiencia de paralelismo resultante. La
+            partición y asignación óptima de un grafo de tareas para ejecución
+            concurrente es un problema NP-completo, por lo cual en la práctica
+            se dispone de métodos heurísticos aproximados para lograr una
+            asignación cercana a la óptima.<br><br>
+            Sin embargo, existen ejemplos de paralelismo de tareas restringido
+            que son de interés en programación concurrente. Tal es el caso del
+            paralelismo encauzado, en el cual el grafo tiene forma de cadena,
+            donde cada nodo recibe datos del nodo previo y sus resultados son
+            enviados al nodo siguiente. El carácter simplificado de este modelo
+            permite obtener paralelismo de eficiencia óptima.
+            <br><br>
+            <center><image src="img/bits4.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h2>Sistemas de memoria compartida (multiprocesadores)</h2>
+            <br><br>
+            Todos los procesadores acceden a una memoria común.
+            La comunicación entre procesadores se hace a través de la
+            memoria.<br><br>
+            Se necesitan primitivas de sincronismo para asegurar el
+            intercambio de datos.
+            <br><br>
+            <center><image src="img/mem1.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Estructura de los multiprocesadores de memoria compartida.</h3>
+            <br><br>
+            La mayoría de los multiprocesadores comerciales son del tipo UMA
+            (Uniform Memory Access): todos los procesadores tienen igual
+            tiempo de acceso a la memoria compartida. En la arquitectura UMA
+            los procesadores se conectan a la memoria a través de un bus, una
+            red multietapa o un conmutador de barras cruzadas (red multietapa o
+            un conmutador de barras cruzadas (crossbar crossbar) y disponen de
+            su propia ) y disponen de su propia memoria caché. Los
+            procesadores tipo NUMA (Non Uniform Memory Access) presentan
+            tiempos de acceso a la memoria compartida que dependen de la
+            ubicación del elemento de proceso y la memoria.
+            <br><br>
+            <center><image src="img/mem2.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h2>Sistemas de memoria distribuida (multicomputadores)</h2>
+            <br><br>
+            Cada procesador tiene su propia memoria y la comunicación se
+            realiza por intercambio explícito de mensajes a través de una red.
+            <br><br>
+            <center><image src="img/mem3.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Ventajas</h3>
+            <br><br>
+            El número de nodos puede ir desde algunas decenas hasta
+            varios miles (o más).<br><br>
+            La arquitectura de paso de mensajes tiene ventajas sobre la de
+            memoria compartida cuando el número de procesadores es
+            grande.<br><br>
+            El número de canales físicos entre nodos suele oscilar entre
+            cuatro y ocho.<br><br>
+            Esta arquitectura es directamente escalable y presenta un bajo
+            coste para sistemas grandes.<br><br>
+            Un problema se especifica como un conjunto de procesos que
+            se comunican entre sí y que se hacen corresponder sobre la
+            estructura física de procesadores.<br><br>
+            <br><br>
+            <h3>Desventajas</h3>
+            <br><br>
+            Se necesitan técnicas de sincronización para acceder a las
+            variables compartidas.<br><br>
+            La contención en la memoria puede reducir significativamente
+            la velocidad.<br><br>
+            No son fácilmente escalables a un gran número de
+            procesadores.<br><br>
+        </div>
+    </center>
+    </body>
+</html>

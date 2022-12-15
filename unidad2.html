@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unidad 2</title>
+        <meta charset="UTF-8">
+        <link href="css/estilosPrincipales.css" rel = "stylesheet">
+        <script src="script/mainScript.js"></script>
+    </head>
+    <body>
+        <div id="barraLateral">
+            <div class="botonLateral" id = "botonLateral" onclick="mostrar()">
+                <span>&#9776;</span>
+            </div>
+            <ul>
+                <li><img id ="logoDelTec" src="img/its.png" alt="escudo del tecnologico"></li>
+                <li><a href="index.html" style="text-decoration: none;">Inicio</a></li>
+                <li><a href="unidad1.html" style="text-decoration: none;">Unidad 1</a></li>
+                <li><a href="unidad2.html" style="text-decoration: none;">Unidad 2</a></li>
+                <li><a href="unidad3.html" style="text-decoration: none;">Unidad 3</a></li>
+                <li><a href="unidad4.html" style="text-decoration: none;">Unidad 4</a></li>
+            </ul>
+        </div>
+        <div class="titulo">
+            <h1>Unidad 2</h1>
+        </div>
+        <center>
+        <div class="contenido">
+            <h2>Estructura del CPU</h2>
+            <br><br>
+            <h3>Organización del procesador</h3>
+            <br><br>
+            la función principal es ejecutar instrucciones, la organización viene condicionada por las
+            tareas que debe realizar y por cómo debe hacerlo operan según una señal de
+            sincronización conocida como señal de reloj.
+            (es un cristal de cuarzo)<br><br>
+            
+            Incluye tantos registros visibles para el usuario todo procesador dispone de 3
+            componentes}<br><br>
+            UAL: circuito que hace un conjunto de operaciones aritméticas lógicas con los datos
+            almacenados dentro del procesador.<br><br>
+            Conjunto de registros: espacio de almacenamiento temporal de datos e instrucciones
+            Dentro del procesador.<br><br>
+            Unidad de control: circuito que controla el funcionamiento de todos los componentes del
+            procesador<br><br>
+            Controla el movimiento de datos e instrucciones dentro y fuera del procesador y también
+            las operaciones ALU.<br><br>
+            <center><image src="img/cpu2.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Estructura de registros</h3>
+            <br><br>
+            Se emplean para controlar las instrucciones en ejecución, manejar direccionamiento de
+            memoria y propiciar la capacidad aritmética.<br><br>
+            Registro de datos: Un CPU puede funcionar con datos en uno de tres modos: entre dos
+            <br><br>
+            registros, entre registros y una ubicación de Memoria de acceso al azar (RAM - Random-
+            Access Memory) y entre dos ubicaciones RAM. Como el CPU está conectado
+            <br><br>
+            directamente a los registros, las operaciones que implican dos registros son las más
+            rápidas; las que se dan entre ubicaciones RAM son las más lentas. Es decir, junta dos
+            registros, añade un registro a una ubicación RAM, o añade dos ubicaciones RAM.
+            <br><br>
+            Registro de direcciones: Para que un CPU pueda almacenar y recuperar datos en RAM,
+            debe tener la dirección de la memoria de la información. Esas operaciones que implican
+            RAM usan registros de dirección de memoria. EL CPU no realiza aritmética en estos
+            registros; en cambio, los usa para ubicar datos que necesita.
+            <br><br>
+            Registro de índice: Un CPU no puede hacer matemáticas en registros de datos, aunque
+            puede hacerlo indirectamente con un registro de índice. Éste trabaja con los registros de
+            datos, permitiendo a un programa procesar hilos de información eficazmente.
+            <br><br>
+            Registros de segmento: Un registro de segmento tiene 16 bits de longitud y facilita un
+            área de memoria para direccionamiento conocida como segmento actual.
+            <br><br>
+            <h3>Ciclo de instruccion</h3>
+            <br><br>
+            Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de
+            fetchdecode-execute en inglés) es el período que tarda la unidad central de proceso
+            (CPU) en ejecutar una instrucción de lenguaje máquina.
+            <br><br>
+            <center><image src="img/cicloins.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Modos de direccionamiento</h3>
+            <br><br>
+            Contar con diferentes formatos de instrucciones, implica contar con las diferentes
+            formas de obtener los operandos de las instrucciones. Dichas formas de se les denomina
+            modos de direccionamiento.<br><br>
+            Direccionamiento por registro:<br><br>
+            Los operandos son registros, los datos a operar están en dos registros de 32 bytes cada
+            uno, dichos datos se suman y el resultado será otro registro del mismo tamaño
+            <br><br>
+            <center><image src="img/modosd1.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            Direccionamiento base o desplazamiento:<br><br>
+            Donde uno de los operandos está en una localidad de memoria cuya dirección es la suma
+            de un registro y una constante que forma parte de la misma instrucción.
+            Ejemplos de instrucciones que usan este modo de direccionamiento: lw, sw, etc.
+            <br><br>
+            <center><image src="img/modosd2.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            Direccionamiento inmediato:<br><br>
+            Donde uno de los operandos es una constante que está en la misma instrucción.
+            Ejemplos de instrucciones que usan este modo de direccionamiento: addi, slti, etc.
+            <br><br>
+            <center><image src="img/modosd3.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            Direccionamiento relativo al PC:<br><br>
+            Donde se forma una dirección sumando una constante, que está en la instrucción, con el
+            registro PC (Program Counter). El resultado de la suma corresponde a la dirección
+            destino si un brinco condicional se va a realizar.
+            Ejemplos de instrucciones que usan este modo de direccionamiento: beq y bne.
+            <br><br>
+            <center><image src="img/modosd4.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            Direccionamiento pseudo directo:<br><br>
+            Donde la dirección destino de un salto corresponde a la concatenación de 26 bits que
+            están en la misma instrucción con los bits más significativos del PC.
+            Ejemplos de instrucciones que usan este modo de direccionamiento: j y jal.
+            <br><br>
+            <center><image src="img/modosd5.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+        </div>
+        </center>
+    </body>
+</html>

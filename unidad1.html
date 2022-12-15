@@ -1,0 +1,258 @@
+<!DOCTYPE html><html>
+    <head>
+        <title>Unidad 1</title>
+        <meta charset="UTF-8">
+        <link href="css/estilosPrincipales.css" rel = "stylesheet">
+        <script src="script/mainScript.js"></script>
+    </head>
+    <body>
+        <div id="barraLateral">
+            <div class="botonLateral" id = "botonLateral" onclick="mostrar()">
+                <span>&#9776;</span>
+            </div>
+            <ul>
+                <li><img id ="logoDelTec" src="img/its.png" alt="escudo del tecnologico"></li>
+                <li><a href="index.html" style="text-decoration: none;">Inicio</a></li>
+                <li><a href="unidad1.html" style="text-decoration: none;">Unidad 1</a></li>
+                <li><a href="unidad2.html" style="text-decoration: none;">Unidad 2</a></li>
+                <li><a href="unidad3.html" style="text-decoration: none;">Unidad 3</a></li>
+                <li><a href="unidad4.html" style="text-decoration: none;">Unidad 4</a></li>
+            </ul>
+        </div>
+        <div class="titulo">
+            <h1>Unidad 1</h1>
+        </div>
+        <center>
+        <div class="contenido">
+            <h2>Modelos de arquitectira</h2>
+            <br>
+            <h3>Arquitectura Von Neumann</h3>
+            <br><br>
+            Tradicionalmente los sistemas con microprocesadores se
+            basan en esta arquitectura, en la cual la unidad central de
+            proceso (CPU), está conectada a una memoria principal
+            única (casi siempre sólo RAM) donde se guardan las
+            instrucciones del programa y los datos. A dicha memoria se
+            accede a través de un sistema interconexión de buses único
+            (control, direcciones y datos).
+            <br><br>
+            En un sistema con arquitectura Von Neumann el tamaño de
+            la unidad de datos o instrucciones está fijado por el ancho
+            del bus que comunica la memoria con la CPU. Así un
+            microprocesador de 8 bits con un bus de 8 bits, tendrá que
+            manejar datos e instrucciones de una o más unidades de 8
+            bits (bytes) de longitud.
+            Si tiene que acceder a una instrucción o dato de más de un
+            byte de longitud, tendrá que realizar más de un acceso a la
+            memoria.
+            El tener un único bus hace que el microprocesador sea más
+            lento en su respuesta, ya que no puede buscar en memoria
+            una nueva instrucción mientras no finalicen las
+            transferencias de datos de la instrucción anterior.
+            <br><br>
+            Las computadoras digitales convencionales presentan un
+            aspecto Von Neumann. Este modelo consta de cinco
+            componentes principales.
+            Unidad de Memoria.
+            Unidad de Entrada/Salida.
+            Unidad de Control. Incluidos CPU.
+            Unidad Aritmética Lógica. Incluida en CPU.
+            Registros de Programas. Incluidos en CPU.
+            <br><br>
+            <center><image src="img/arqui2.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br><br><br>
+            <h3>Modelo Harvard</h3>
+            <br><br>
+            Esta arquitectura utiliza los Micro controladores, tiene la
+            unidad central de proceso (CPU) conectada a dos memorias
+            (una con las instrucciones y otra con los datos) por medio de
+            dos buses diferentes.
+            Una de las memorias contiene solamente las instrucciones
+            del programa (Memoria de Programa), y la otra sólo
+            almacena datos (Memoria de Datos).
+            Ambos buses son totalmente independientes lo que permite
+            que la CPU pueda acceder de forma independiente y
+            simultánea a la memoria de datos y a la de instrucciones.
+            Como los buses son independientes estos pueden tener
+            distintos contenidos en la misma dirección y también distinta
+            longitud.
+            <br><br>
+            También la longitud de los datos y las instrucciones puede
+            ser distinta, lo que optimiza el uso de la memoria en general.
+            Para un procesador de Set de Instrucciones Reducido, o
+            RISC (Reduced Instrucción Set Computer), el set de
+            instrucciones y el bus de memoria de programa pueden
+            <br><br>
+            diseñarse de tal manera que todas las instrucciones tengan
+            una sola posición de memoria de programa de longitud.
+            Además, al ser los buses independientes, el CPU puede
+            acceder a los datos para completar la ejecución de una
+            instrucción, y al mismo tiempo leer la siguiente instrucción a
+            ejecutar.
+            <center><image src="img/arqui3.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br><br><br>
+            
+            <h3>Arquitectura Segmentada.</h3>
+            <br><br>
+            Es una de las tecnologías utilizadas para realizar la
+            segmentación o paralelismo. Divide el procesador, en etapas,
+            procesa una instrucción diferente en cada una y trabaja con
+            varias a la vez.<br><br>
+            Pueden trabajar de forma paralela, en diferentes
+            instrucciones, utilizando una cola de instrucciones para su
+            comunicación, denominado entubamiento.<br><br>
+            La dependencia de datos y de control, que tiene como efecto
+            la disminución del rendimiento del pipelining.
+            <br><br>
+            La segmentación de cauce (pipelining) es una forma efectiva
+            de organizar el hardware del CPU para realizar más de una
+            operación al mismo tiempo.<br><br>
+            Consiste en descomponer el proceso de ejecución de las
+            instrucciones en fases o etapas que permitan una ejecución
+            simultánea.<br><br>
+            Explota el paralelismo entre las instrucciones de un flujo
+            secuencial.
+            <br><br>
+            La segmentación es una técnica de implementación por la
+            cual se solapa la ejecución de múltiples instrucciones.
+            La técnica de implementación clave utilizada para hacer
+            CPU rápidas.<br><br>
+            La segmentación es como una línea de ensamblaje: cada
+            etapa de la segmentación completa una parte de la
+            instrucción.
+            <br><br>
+            Como en una línea de ensamblaje, la acción a realizar en una
+            instrucción se descompone en partes más pequeñas, cada una
+            de las cuales necesita una fracción del tiempo necesario para
+            completar la instrucción completa.<br><br>
+            Cada uno de estos pasos se define como etapa de la
+            segmentación o segmento.<br><br>
+            Las etapas están conectadas, cada una a la siguiente, para
+            formar una especie de cauce las instrucciones se entran por
+            un extremo, son procesadas a través de las etapas y salen por
+            el otro.<br><br>
+            La productividad de la segmentación está determinada por la
+            frecuencia con que una instrucción salga del cauce.<br><br>
+            Como las etapas están conectadas entre sí, todas las etapas
+            deben estar listas para proceder al mismo tiempo. El tiempo
+            requerido para desplazar una instrucción, un paso, a lo largo
+            del cauce es un ciclo máquina.<br><br>
+            La duración de un ciclo máquina está determinada por el
+            tiempo que necesita la etapa más lenta (porque todas las
+            etapas progresan a la vez).<br><br>
+            Con frecuencia, el ciclo máquina es un ciclo de reloj (a veces
+            dos, o raramente más), aunque el reloj puede tener múltiples
+            fases.<br><br>
+            <center><image src="img/arqui4.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br><br><br>
+            
+            <h3>Arquitectura de Multiprocesamiento.</h3>
+            <br><br>
+            Se denomina multiprocesador a un computador que cuenta
+            con dos o más microprocesadores (CPUs).<br><br>
+            El multiprocesador puede ejecutar simultáneamente varios
+            hilos pertenecientes a un mismo proceso o bien a procesos
+            diferentes.<br><br>
+            La arquitectura NUMA, donde cada procesador tiene acceso
+            y control exclusivo a una parte de la memoria.<br><br>
+            La arquitectura SMP, donde todos los procesadores
+            comparten toda la memoria.<br><br>
+            Para que un multiprocesador opere correctamente necesita
+            un sistema operativo especialmente diseñado para ello.<br><br>
+            La mayoría de los sistemas operativos actuales poseen esta
+            capacidad.
+            <br><br>
+            Cuando se desea incrementar el desempeño más de lo que
+            permite la técnica de segmentación (pipeline), se requiere
+            utilizar más de un procesador para la ejecución del programa
+            de aplicación.<br><br>
+            Los CPU de multiprocesamiento según Flynn se clasifican
+            de la siguiente manera:<br><br>
+            
+            SISO - (Single Instruction, Single Operand) computadoras
+            Monoprocesador<br><br>
+            SIMO - (Single Instruction, Multiple Operand) procesadores
+            vectoriales, Exenciones MMX<br><br>
+            MISO - (Multiple Instruction, Single Operand) No
+            implementado<br><br>
+            MIMO - (Multiple Instruction, Multiple Operand) sistemas
+            SMP, Clusters, GPUs<br><br>
+            <center><image src="img/arqui4.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br><br><br>
+            <h2>Analisis de componentes</h2>
+            Análisis de componentes básicos de una computadora de escritorio.Una
+            computadora está formada fundamentalmente por dos aspectos básicos:
+            Hardware y software.
+            Tenemos componentes esenciales y específicos para tareas puntuales.
+            Componentes Internos.
+            Cuando hablamos de una computadora nos referimos al conjunto
+            de componentes internos que se encuentra colocados dentro del gabinete.
+            Como sabes, los componentes internos son los que componen el hardware de
+            la computadora.
+            Los principales componentes internos de la computadora son:
+            <br>
+            <ul style="text-align: left;">
+                <li>Tarjeta madre (Motherboard) , placa base.</li>
+                <li>CPU o procesador.</li>
+                <li>Memoria RAM.</li>
+                <li>Disco duro (HD).</li>
+                <li>Fuente de alimentación.</li>
+            </ul>
+            <br>
+            <h3>Tarjeta Madre (MotherBoard).</h3>
+            La tarjeta madre (MB) , también llamada “placa base” es de los componentes
+            esenciales de las computadoras. En ella se conectan los diferentes
+            componentes internos, incluyendo el procesador CPU, la memoria RAM, la
+            tarjeta gráfica, los discos duros, es decir todos los elementos internos.
+            <br><br>
+            <center><image src="img/motherb.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Unidad Central de Procesamiento CPU.</h3>
+            El CPU es algo así como el cerebro de tu computadora. En realidad es el
+            elemento encargado de analizar y procesar toda la información que ingresa y
+            sale de la computadora.<br><br>
+            El procesador decodifica y ejecuta las instrucciones de los programas que se
+            encuentran cargados en la memoria principal de la computadora.
+            Además funciona como coordinador y controlador de casi todos los otros
+            componentes, tanto de los internos como de los externos.<br><br>
+            <center><image src="img/cpu.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Memoria RAM.</h3>
+            <br><br>
+            La Random Access Memory o más conocida como memoria RAM se conecta
+            a la tarjeta madre y en ella se guardan y se cargan las instrucciones que se
+            ejecutan en el procesador.
+            Esas instrucciones son enviadas desde los componentes y dispositivos
+            conectados a la tarjeta madre y a los puertos de la computadora.
+            <br><br>
+            <center><image src="img/ram.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Disco duro.</h3>
+            <br><br>
+            El disco duro de tu computadora es el componente encargado de almacenar de
+            forma permanente sistemas operativos así como los datos que ingresan en la
+            computadora.<br><br>
+            Todo la información que contiene la computadora, incluyendo documentos
+            (archivos, aplicaciones, fotografías música, descargas de internet, etc.) Pero
+            además en él también se almacena el sistema operativo y todos los
+            programas instalados en la computadora.<br><br>
+            Para poder ser el soporte de almacenamiento principal de la computadora, el
+            disco duro pueden contener grandes cantidades de información.<br><br>
+            Todos los datos de la computadora se almacenan en el disco duro, de ahí su
+            importancia.<br><br>
+            <center><image src="img/hardd.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+            <h3>Fuente de alimentación.</h3>
+            <br><br>
+            La fuente de alimentación es el componente que proporciona corriente
+            eléctrica a todos los elementos de la computadora. Esta se encuentra dentro
+            del gabinete.<br><br>
+            Para ello, la fuente de alimentación transforma la corriente alterna de la red de
+            tu casa en corriente continua. Luego de ello la distribuye a todos los
+            componentes que estén conectados a la computadora.<br><br>
+            <center><image src="img/fuente.png" style="width: 25%; height: 25%;" alt="image arqui"></center>
+            <br><br>
+        </div>
+        </center>
+    </body>
+</html>
